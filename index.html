@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onderwijs Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welkom op de Onderwijs Site</h1>
+        <p>Interactieve oefeningen voor rekenen, taal en spelling.</p>
+    </header>
+
+    <nav>
+        <button onclick="showPage('rekenen')">Rekenen</button>
+        <button onclick="showPage('taal')">Taal</button>
+        <button onclick="showPage('spelling')">Spelling</button>
+    </nav>
+
+    <main id="content">
+        <p>Kies een vakgebied om te beginnen.</p>
+    </main>
+
+    <script>
+        function showPage(page) {
+            document.getElementById('content').innerHTML =
+                `<h2>${page.charAt(0).toUpperCase() + page.slice(1)}</h2>
+                 <p>Hier komen de oefeningen voor ${page}.</p>`;
+        }
+    </script>
+
+</body>
+</html>
