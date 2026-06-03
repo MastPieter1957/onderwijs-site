@@ -11,7 +11,7 @@
 
 <div class="menu">
     <button class="main-btn" onclick="toonBasis()">Basis onderwijs</button>
-    <button class="main-btn">Voortgezet onderwijs</button>
+    <button class="main-btn" onclick="toonVoortgezet()">Voortgezet onderwijs</button>
 </div>
 
 <!-- Submenu voor Basis Onderwijs -->
@@ -22,6 +22,22 @@
     <button onclick="location.href='groep6.html'">Groep 6</button>
 </div>
 
-<script src="script.js"></script>
+<!-- Submenu voor Voortgezet Onderwijs -->
+<div id="voortgezet-submenu" class="submenu hidden">
+    <button onclick="#">Klas 1</button>
+    <button onclick="#">Klas 2</button>
+    <button onclick="#">Klas 3</button>
+</div>
+
+<script>
+function toonBasis() {
+    document.getElementById("basis-submenu").classList.toggle("hidden");
+}
+
+function toonVoortgezet() {
+    document.getElementById("voortgezet-submenu").classList.toggle("hidden");
+}
+</script>
+
 </body>
 </html>
