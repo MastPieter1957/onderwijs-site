@@ -2,34 +2,26 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onderwijs Site</title>
+    <title>Onderwijs Startpagina</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Welkom op de Onderwijs Site</h1>
-        <p>Interactieve oefeningen voor rekenen, taal en spelling.</p>
-    </header>
+<h1>Welkom op de Onderwijs Startpagina</h1>
 
-    <nav>
-        <button onclick="showPage('rekenen')">Rekenen</button>
-        <button onclick="showPage('taal')">Taal</button>
-        <button onclick="showPage('spelling')">Spelling</button>
-    </nav>
+<div class="menu">
+    <button class="main-btn" onclick="toonBasis()">Basis onderwijs</button>
+    <button class="main-btn">Voortgezet onderwijs</button>
+</div>
 
-    <main id="content">
-        <p>Kies een vakgebied om te beginnen.</p>
-    </main>
+<!-- Submenu voor Basis Onderwijs -->
+<div id="basis-submenu" class="submenu hidden">
+    <button onclick="location.href='groep3.html'">Groep 3</button>
+    <button onclick="location.href='groep4.html'">Groep 4</button>
+    <button onclick="location.href='groep5.html'">Groep 5</button>
+    <button onclick="location.href='groep6.html'">Groep 6</button>
+</div>
 
-    <script>
-        function showPage(page) {
-            document.getElementById('content').innerHTML =
-                `<h2>${page.charAt(0).toUpperCase() + page.slice(1)}</h2>
-                 <p>Hier komen de oefeningen voor ${page}.</p>`;
-        }
-    </script>
-
+<script src="script.js"></script>
 </body>
 </html>
