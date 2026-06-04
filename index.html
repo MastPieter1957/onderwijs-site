@@ -10,34 +10,35 @@
 <h1>Welkom op de Onderwijs Startpagina</h1>
 
 <div class="menu">
-    <button class="main-btn" onclick="toonBasis()">Basis onderwijs</button>
-    <button class="main-btn" onclick="toonVoortgezet()">Voortgezet onderwijs</button>
+  <button class="main-btn" onclick="toonBasis()">Basis onderwijs</button>
+  <button class="main-btn" onclick="toonVoortgezet()">Voortgezet onderwijs</button>
 </div>
 
 <!-- Submenu voor Basis Onderwijs -->
 <div id="basis-submenu" class="submenu hidden">
-    <button>Groep 3</button>
-    <button>Groep 4</button>
-    <button>Groep 5</button>
-    <button>Groep 6</button>
+  <button onclick="location.href='groep3.html'">Groep 3</button>
+  <button onclick="location.href='groep4.html'">Groep 4</button>
+  <button onclick="location.href='groep5.html'">Groep 5</button>
+  <button onclick="location.href='groep6.html'">Groep 6</button>
 </div>
 
 <!-- Submenu voor Voortgezet Onderwijs -->
 <div id="voortgezet-submenu" class="submenu hidden">
-    <button>Klas 1</button>
-    <button>Klas 2</button>
-    <button>Klas 3</button>
+  <button onclick="#">Klas 1</button>
+  <button onclick="#">Klas 2</button>
+  <button onclick="#">Klas 3</button>
 </div>
 
 <script>
-function toonBasis() {
+  function toonBasis() {
     document.getElementById("basis-submenu").classList.toggle("hidden");
-}
+  }
 
-function toonVoortgezet() {
+  function toonVoortgezet() {
     document.getElementById("voortgezet-submenu").classList.toggle("hidden");
-}
+  }
 </script>
+
 
 </body>
 </html>
